@@ -10,7 +10,7 @@ export default function reducer(state, action) {
             });
         case "ADD":
             // Add new todo item
-            return state.slice().push(action.newItem);
+            return [action.item, ...state];
         case "DELETE":
             // Delete existing todo item
             return state.filter(s => s.id !== action.id);

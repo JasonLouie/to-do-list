@@ -19,6 +19,17 @@ p, h1 {
     display: flex;
 }
 
+.add-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.add-item > input {
+    box-sizing: border-box;
+    width: 90%;
+    height: 24px;
+}
+
 .item-container {
     justify-content: space-between;
     padding: 2px;
@@ -35,9 +46,11 @@ p, h1 {
 }
 
 .action-btn {
-    padding: 4px 6px;
+    box-sizing: border-box;
+    height: 24px;
+    padding: 0 6px;
 }
 
-.action-btn:first-child {
-    margin-right: 4px;
+.action-btn:last-child {
+    margin-left: 4px;
 }
