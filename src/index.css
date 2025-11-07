@@ -1,0 +1,43 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+}
+
+p, h1 {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.item-container {
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.to-do-item {
+    margin-right: 10px;
+}
+
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-btn {
+    padding: 4px 6px;
+}
+
+.action-btn:first-child {
+    margin-right: 4px;
+}
