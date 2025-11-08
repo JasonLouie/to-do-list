@@ -1,14 +1,7 @@
-:root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    min-width: 320px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
 }
 
 p, h1 {
@@ -19,7 +12,25 @@ p, h1 {
     display: flex;
 }
 
+.flex.center {
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+}
+
+.content {
+    width: 90%;
+}
+
+.header {
+    margin: 14px 0;
+}
+
 .add-item {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -30,9 +41,33 @@ p, h1 {
     height: 24px;
 }
 
+.add-item > button {
+    width: 9%;
+}
+
+.message {
+    font-weight: 500;
+    text-align: center;
+}
+
 .item-container {
     justify-content: space-between;
-    padding: 2px;
+    padding: 3px;
+    border: 1px solid lightgray;
+    border-bottom: none;
+}
+
+.item-container:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.item-container:last-child {
+    border-radius: 0 0 6px 6px;
+    border-bottom: 1px solid lightgray;
+}
+
+.item-container:hover {
+    background-color: #f0f0f0;
 }
 
 .to-do-item {
@@ -49,6 +84,7 @@ p, h1 {
     box-sizing: border-box;
     height: 24px;
     padding: 0 6px;
+    min-width: fit-content;
 }
 
 .action-btn:last-child {

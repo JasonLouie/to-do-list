@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useRef, useState } from "react";
+import ItemContext from "../itemContext";
 
-export default function ToDoItem({ id, title, completed, dispatch }) {
+export default function ToDoListItem({ id, title, completed }) {
+    const dispatch = useContext(ItemContext);
+    const container = useRef(null);
     const [edit, setEdit] = useState({state: false, title});
     const [done, setDone] = useState(completed);
 
@@ -26,11 +29,17 @@ export default function ToDoItem({ id, title, completed, dispatch }) {
         dispatch({type: "TOGGLE", id});
     }
 
+    
+
     return (
         <div className="flex item-container">
             <div className="to-do-item flex">
-                <input type="checkbox" checked={done} onChange={handleDone} />
-                {edit.state ? <input type="text" value={edit.title} onChange={(e) => setEdit({...edit, title: e.target.value})}/> : <p>{title}</p>}
+                <input type="checkbox" name="completed" checked={done} onChange={handleDone} />
+                {edit.state ?
+                    <input type="text" name="title" value={edit.title} onChange={(e) => setEdit({...edit, title: e.target.value})}/>
+                    : 
+                    <p>{title}</p>
+                }
             </div>
             <div className="action-container">
                 <button className="action-btn" onClick={handleEdit}>{edit.state ? "Save" : "Edit"}</button>
