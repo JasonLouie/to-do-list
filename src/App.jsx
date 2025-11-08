@@ -23,7 +23,6 @@ export default function App() {
     )
 }
 
-// Need to use conditional rendering to display message when no items are left.
 // Consider the useEffect to get list items from todos JSONPlaceholder API
 // Improve styling
 // Consider using forms for inputs so pressing enter counts as saving or adding items
