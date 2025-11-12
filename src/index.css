@@ -71,10 +71,6 @@ p, h1 {
     margin-right: 10px;
 }
 
-.modify-input {
-    width: max-content;
-}
-
 .action-container {
     display: flex;
     justify-content: space-between;
