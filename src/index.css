@@ -16,12 +16,9 @@ p, h1 {
     justify-content: center;
 }
 
-.page {
-    display: flex;
-}
-
 .content {
-    width: 90%;
+    width: 800px;
+    max-width: 90%;
 }
 
 .header {
@@ -74,6 +71,10 @@ p, h1 {
     margin-right: 10px;
 }
 
+.modify-input {
+    width: max-content;
+}
+
 .action-container {
     display: flex;
     justify-content: space-between;
@@ -87,6 +88,11 @@ p, h1 {
     min-width: fit-content;
 }
 
+.action-btn:first-child {
+    width: 47px;
+}
+
 .action-btn:last-child {
+    width: 58px;
     margin-left: 4px;
 }

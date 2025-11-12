@@ -1,5 +1,7 @@
 export default function reducer(state, action) {
     switch (action.type) {
+        case "SET_LIST":
+            return action.data;
         case "MODIFY":
             // Modify existing todo item
             return state.map(s => {
