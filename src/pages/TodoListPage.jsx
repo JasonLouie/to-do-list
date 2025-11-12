@@ -18,12 +18,12 @@ export default function ToDoListPage() {
             const response = await fetch(`https://jsonplaceholder.typicode.com/todos?userId=${id}`);
             const data = await response.json();
             setDataInfo({data, loading: false});
-            dispatch({type: "SET_LIST", data});
+            dispatch({type: "SET_LIST", data: data.toReversed()});
         } catch (err) {
             console.error(err);
             // If there is an error, fallback to the static data.
             setDataInfo({data: initialState, loading: false});
-            dispatch({type: "SET_LIST", data: initialState});
+            dispatch({type: "SET_LIST", data: initialState.toReversed()});
         }
     }
 
